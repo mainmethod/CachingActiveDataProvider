@@ -33,3 +33,11 @@ on the model itself.
                 return $criteria;
             }
         }
+        
+        $posts = new PostDataProvider(array('category' => $category, 'limit' => 20));
+        
+        //In View
+        $this->widget('CListView',array(
+            'dataProvider' => $posts,
+            'itemView'     => '/post/view',
+        ));
