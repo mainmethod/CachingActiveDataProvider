@@ -39,5 +39,5 @@ on the model itself.
         //In View
         $this->widget('CListView',array(
             'dataProvider' => $posts,
-            'itemView'     => '/post/view',
+            'itemView'     => '/post/partials/_view',
         ));
