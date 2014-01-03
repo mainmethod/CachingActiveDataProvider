@@ -24,7 +24,7 @@ on the model itself.
                 parent::__construct('Post',$config);
             }
                
-            public function baseCriteria(){
+            protected function baseCriteria(){
                 $criteria = parent::baseCriteria();
                 $criteria->alias  = 'post';
                 $criteria->scopes = array('recent','published');
